@@ -5,20 +5,21 @@ services:
     container_name: api
     build: .
     ports:
-      - 3000:3000
+      - $PORT:$PORT #local : docker
     env_file:
       - .env
     depends_on:
       db:
         condition: service_healthy
+    command: bash -c "yarn typeorm migration:run -d src/data-source && yarn dev"
     volumes:
       - .:/app
 
   db:
     container_name: db
-    image: postgres:14-alpine
+    image: postgres:latest
     ports:
-      - 5431:5432
+      - $PGPORT:$PGPORT #local : Docker
     env_file:
       - .env
     healthcheck:
