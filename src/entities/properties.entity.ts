@@ -28,7 +28,7 @@ class Properties{
     @OneToOne(()=> Addresses)@JoinColumn()
     address: Addresses
 
-    @ManyToOne(()=>Categories)
+    @ManyToOne(()=>Categories, {eager:true})
     category: Categories
 
     @OneToMany(()=>Schedules, (schedule)=> schedule.property)

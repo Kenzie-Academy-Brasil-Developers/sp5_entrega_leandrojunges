@@ -13,7 +13,7 @@ class User{
     @Column({length:60, unique:true})
     email: string
 
-    @Column({length:120})
+    @Column({length:119})
     @Exclude()
     password:string
 

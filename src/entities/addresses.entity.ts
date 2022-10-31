@@ -5,13 +5,13 @@ class Addresses{
     @PrimaryGeneratedColumn('uuid')
     id: string
 
-    @Column({length: 255})
+    @Column({length: 60})
     district: string
 
     @Column({length:8})
     zipCode: string
 
-    @Column({length: 255})
+    @Column({length: 60})
     number: string
 
     @Column({length: 20})

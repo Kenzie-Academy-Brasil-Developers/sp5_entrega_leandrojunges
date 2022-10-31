@@ -31,7 +31,6 @@ const createScheduleService = async ({date, hour, propertyId,userId}: IScheduleR
   })
  
   
-  
   const schedule = schedulesRepository.create({
     date,
     hour,

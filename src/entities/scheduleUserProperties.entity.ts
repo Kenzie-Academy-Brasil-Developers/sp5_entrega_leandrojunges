@@ -14,7 +14,7 @@ class Schedules{
     @Column({type:'time'})
     hour: string
 
-    @ManyToOne(()=>Properties)
+    @ManyToOne(()=>Properties, {eager: true})
     property: Properties
 
     @ManyToOne(()=> User, {eager: true})

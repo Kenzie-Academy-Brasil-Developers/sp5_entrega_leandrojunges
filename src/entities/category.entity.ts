@@ -8,7 +8,7 @@ class Categories{
     @PrimaryGeneratedColumn('uuid')
     id: string
 
-    @Column({length: 40, unique:true})
+    @Column({length: 60, unique:true})
     name: string
 
     @OneToMany(()=> Properties, (properties)=> properties.category)
